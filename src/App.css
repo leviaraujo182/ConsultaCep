@@ -1,38 +1,45 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #F5F5F5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card_content{
+  width: 25%;
+  height: 60%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .card_content .content_header {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #FFC20E;
+  height: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+.App .card_content .content_header .txtfield {
+  width: 95%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .card_content .content_header .txtconsulte{
+  font-weight: 600;
+  font-size: 2vw;
+  color: #FFFF;
+  margin-bottom: 20px;
+}
+
+.App .card_content .content_bottom {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .card_content .content_header .btnsearch {
+  width: 80%;
+  margin-top: 20px;
+  
 }
