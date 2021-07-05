@@ -4,6 +4,7 @@ import { Card, TextField, Button } from '@material-ui/core'
 import { consultarCep } from 'correios-brasil'
 
 import CardData from './components/CardData'
+import ContentResult from './components/ContentResult'
 
 interface cepData {
   cep: number
@@ -43,7 +44,7 @@ function App() {
           <Button variant="outlined" className="btnsearch" onClick={ConsultaCep}>Pesquisar</Button>
         </div>
         <div className="content_bottom">
-           {city.length > 0 ? "Dados encontrados" : "Nenhum registro encontrado"}
+           {city.length > 0 ? <ContentResult /> : "Nenhum registro encontrado"}
         </div>
 
       </Card>
