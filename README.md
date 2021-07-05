@@ -3,5 +3,5 @@ O projeto tem o intuito de fazer uma verificação de CEP, onde ao passar as inf
 
 # Imagens do projeto
 <p align="center">
-  <img src="https://i.imgur.com/YVxnJGY.gifv" width="230" title="Tela inicial">
+  <img src="https://i.imgur.com/YVxnJGY.gif" width="600" title="Tela inicial">
 </p>
