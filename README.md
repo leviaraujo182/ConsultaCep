@@ -24,6 +24,6 @@ npm install
 
 3 - Se você estiver dentro da pasta do projeto, é só roda-lo
 ```
-npm install
+npm start
 ```
 
