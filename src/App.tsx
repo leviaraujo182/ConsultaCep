@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Card, TextField, Button } from '@material-ui/core'
+import { Card, TextField, Button, LinearProgress, makeStyles, createMuiTheme, ThemeProvider } from '@material-ui/core'
 import { consultarCep } from 'correios-brasil'
 
 import CardData from './components/CardData'
 import ContentResult from './components/ContentResult'
+import { orange,  } from '@material-ui/core/colors';
+
+const outerTheme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: '#ffffff'
+    }
+  }
+})
+
 
 interface cepData {
   cep: number
   city: string
 }
 
-function App() {
+const useStyles = makeStyles({
+  textLabel: {
+    color: 'white'
+  }
+})
 
+function App() {
+  const classes = useStyles()
   const [cep, setCep] = useState('')
   const [city, setCity] = useState('')
   const [uf, setUf] = useState('')
@@ -40,7 +56,9 @@ function App() {
       <Card className="card_content">
         <div className="content_header">
           <label className="txtconsulte">CONSULTE O SEU CEP!</label>
-          <TextField label="CEP" className="txtfield" value={cep} onChange={inputHandler}/>
+          <ThemeProvider theme={outerTheme}>
+            <TextField label="CEP" className="txtfield" value={cep} onChange={inputHandler} color="secondary" />
+          </ThemeProvider>
           <Button variant="outlined" className="btnsearch" onClick={ConsultaCep}>Pesquisar</Button>
         </div>
         <div className="content_bottom">
