@@ -19,7 +19,14 @@ const useStyles = makeStyles({
     }
 })
 
-function ContentResult(){
+
+interface ResultProps {
+    city: string
+    dd: string
+    uf: string
+}
+
+function ContentResult(props: ResultProps){
     const classes = useStyles()
     return (
         <div className="ContentResult">
@@ -30,15 +37,15 @@ function ContentResult(){
                 <div className="content-list">
                     <List>
                         <ListItem button>
-                            <Typography>Cidade: </Typography>
+                            <Typography>Cidade: {props.city}</Typography>
                         </ListItem>
                         
                         <ListItem button>
-                            <Typography>Cidade: </Typography>
+                            <Typography>UF: {props.uf}</Typography>
                         </ListItem>
 
                         <ListItem button>
-                            <Typography>DD: </Typography>
+                            <Typography>DD: {props.dd}</Typography>
                         </ListItem>
                     </List>
                 </div>

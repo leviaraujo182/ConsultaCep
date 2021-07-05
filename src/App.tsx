@@ -44,7 +44,7 @@ function App() {
           <Button variant="outlined" className="btnsearch" onClick={ConsultaCep}>Pesquisar</Button>
         </div>
         <div className="content_bottom">
-           {city.length > 0 ? <ContentResult /> : "Nenhum registro encontrado"}
+           {city.length > 0 ? <ContentResult city={city} uf={uf} dd={dd} /> : "Nenhum registro encontrado"}
         </div>
 
       </Card>
